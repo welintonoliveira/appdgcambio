@@ -29,6 +29,9 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
+
+    console.log('Home');
+
     // Checa o estado da conexão de internet
     NetInfo.addEventListener("connectionChange", this.refresh);
   }

@@ -75,7 +75,7 @@ const Navigation = initialRoute => {
         initialRouteName: initialRoute === "Carrinho" ? "Home" : "MeusPedidos",
         contentComponent: CustomMenuLogadoNavigation,
         contentOptions: {
-          activeTintColor: colors.white,
+          activeTintColor: colors.black,
           activeBackgroundColor: colors.primary
         }
       }

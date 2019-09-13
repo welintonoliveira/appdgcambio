@@ -9,15 +9,15 @@ const styles = StyleSheet.create({
 	areaInput:{
 		height:fonts.inputHeight,
 		fontSize:fonts.input,
-		borderBottomColor: colors.white,
+		borderBottomColor: colors.black,
 		borderBottomWidth: 1,
 	},
 	input:{
-		color: colors.white,
+		color: colors.black,
 		height: 50
 	},
 	title:{
-		color: colors.white,
+		color: colors.black,
 		fontSize: fonts.input,
 	},
 	textoErro:{

@@ -4,7 +4,7 @@ const fonts = {
   medium: 12,
   small: 11,
   tiny: 10,
-  inputHeight: 60,
+  inputHeight: 50,
   inputPaddingLeft:10  
 };
 

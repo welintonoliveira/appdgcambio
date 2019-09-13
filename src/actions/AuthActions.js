@@ -42,7 +42,7 @@ export const logoutApp = (token) =>{
 	return (dispatch) => {
 	    AppCambioAPI.deslogarCliente(token).then(function(response){
 			if(response.errorMessage === ''){
-				AsyncStorage.removeItem('@primecaseTokenCliente');
+				AsyncStorage.removeItem('@primecaseTokenClienteDG');
 				dispatch({
 					type:'RESET_APP'
 				});

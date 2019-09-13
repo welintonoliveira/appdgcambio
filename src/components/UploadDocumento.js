@@ -93,19 +93,21 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   button: {
-    backgroundColor: colors.primary,
+    //backgroundColor: colors.primary,
     borderRadius: 10,
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
+    borderColor: colors.black,
+    borderWidth: 1
   },
   icon: {
-    color: colors.primary,
+    color: colors.black,
     marginBottom: 10
   },
   text: {
-    color: colors.white,
+    color: colors.black,
     fontWeight: "bold",
     fontSize: 16,
     textAlign: "center",
@@ -114,7 +116,7 @@ const styles = StyleSheet.create({
   wrapIcon: {
     width: 60,
     height: 60,
-    backgroundColor: colors.white,
+    backgroundColor: colors.primary,
     borderRadius: 50,
     paddingTop: 9,
     alignItems: "center",

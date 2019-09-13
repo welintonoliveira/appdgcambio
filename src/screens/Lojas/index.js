@@ -66,7 +66,7 @@ export default class Lojas extends Component {
   _renderHeader = section => {
     return (
       <View style={styles.buttonDetalhe}>
-        <Text style={[styles.titlePraca, { color: colors.white }]}>
+        <Text style={[styles.titlePraca, { color: colors.black }]}>
           {section.descricao}{" "}
           <Icon name="chevron-down" size={10} style={styles.iconLoja} />
         </Text>

@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
 		marginBottom:5
 	},
 	titulo:{
-		color:colors.white,
+		color:colors.black,
 		fontSize: 15,
 		marginLeft: 5
 	},
 	iconTitulo:{
-		color:colors.white
+		color:colors.black
 	},
 	areaItemPedido:{
 		flexDirection:'column',
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 		alignItems:'center'
 	},
 	texto:{
-		color:colors.white,
+		color:colors.black,
 		fontSize:12
 	},
 	tipoItem:{

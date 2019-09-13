@@ -63,7 +63,7 @@ class ModalDeslogar extends Component {
             }
           } else {
             // Persiste o token do cliente na base local para ser utilizado quando o cliente abrir o aplicativo novamente
-            AsyncStorage.setItem("@primecaseTokenCliente", response.data.Token);
+            AsyncStorage.setItem("@primecaseTokenClienteDG", response.data.Token);
 
             // Atualiza os dados do cliente no reducer
             this.props.atualizarDadosCliente(

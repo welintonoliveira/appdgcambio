@@ -11,7 +11,6 @@ import { Content, Container } from "native-base";
 
 import styles from "./styles";
 import LogoSvg from "../../../components/Logo/LogoSvg";
-import IconeSvg from "../../../components/Logo/IconeSvg";
 import ButtonSendModal from "../components/ButtonSendModal";
 import { toEmail } from "../../../configuracao/Helpers";
 import AppCambioAPI from "../../../AppCambioAPI";
@@ -59,7 +58,7 @@ export default class EsqueciSenha extends Component {
       <Container>
         <HeaderApp
           initialRouter={false}
-          title="Pedidos"
+          title="Esqueci Minha Senha"
           navigation={this.props.navigation}
           iconCarrinho={{ quantidadeItens: 0, visible: false }}
           showLogo={false}
@@ -77,9 +76,9 @@ export default class EsqueciSenha extends Component {
             }}
           >
             <View style={styles.backgroundOpacity}>
-              <KeyboardAvoidingView style={styles.container} enabled>
+              <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
                 <View style={styles.espacoLogoTopo}>
-                  <IconeSvg />
+                  <LogoSvg />
                 </View>
                 <View style={styles.container}>
                   <View style={styles.areaInputEmailLogin}>
@@ -97,9 +96,6 @@ export default class EsqueciSenha extends Component {
                   />
                 </View>
               </KeyboardAvoidingView>
-              <View style={[styles.espacoLogoRodape]}>
-                <LogoSvg />
-              </View>
             </View>
           </ImageBackground>
         </Content>

@@ -19,8 +19,11 @@ class MenuNavigation extends Component {
 
 	checkUsuarioLogado = async () => {
 		try{
+
+			console.log("MenuNavigation");
+
 			// Recupera os dados gravados do cliente
-			let token = await AsyncStorage.getItem('@primecaseTokenCliente');
+			let token = await AsyncStorage.getItem('@primecaseTokenClienteDG');
 
 			// Se existir alguma informação gravada no aplicativo
 			if(token){
@@ -31,7 +34,7 @@ class MenuNavigation extends Component {
 					// Exibe o erro na consulta do cliente pelo token informado
 					if(result.errorMessage !== '' || result.data.ClienteID <= 0){
 						// Limpa os dados do cliente da base deslogando o mesmo
-						AsyncStorage.removeItem('@primecaseTokenCliente');
+						AsyncStorage.removeItem('@primecaseTokenClienteDG');
 
 						// Aguarda 1 segundo e envia o cliente para area deslogada para poder seguir com a utilização do sistema
 						setTimeout(()=>{

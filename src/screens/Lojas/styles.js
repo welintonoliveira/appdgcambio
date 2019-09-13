@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
     flex: 1
   },
   textoCarregamento: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 18
   },
   areaDescricaoPontoRetirada: {
     flexDirection: "column"
   },
   textoPontoRetirada: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 16
   },
   button: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   // Controle customizado (PontoRetirada)
   areaTituloPraca: {
     height: 60,
-    backgroundColor: colors.white,
+    //backgroundColor: colors.black,
     justifyContent: "center",
     alignItems: "center",
     marginRight: 10
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 
   // Praça
   areaCabecario: {
-    borderColor: colors.white,
+    borderColor: colors.black,
     borderBottomWidth: 1,
     paddingLeft: 10,
     paddingRight: 10,
@@ -78,11 +78,11 @@ const styles = StyleSheet.create({
   },
   pontoRetiradaTitle: {
     fontSize: 15,
-    color: colors.warning
+    color: colors.black
   },
   pontoRetiradaDescricao: {
     fontSize: 13,
-    color: colors.white
+    color: colors.black
   },
   pontoRetiradaImage: {
     width: 80,
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   espacoIconPinRedondo: {
     marginLeft: 10,
-    backgroundColor: colors.white,
+    //backgroundColor: colors.black,
     width: 30,
     height: 30,
     borderRadius: 15,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: 10,
     marginRight: 10,
-    borderColor: colors.white,
+    borderColor: colors.black,
     borderWidth: 1,
     paddingLeft: 20,
     paddingRight: 20,
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   titulo: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 20,
     fontWeight: "normal"
   }

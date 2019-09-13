@@ -62,7 +62,7 @@ export default class PedidoLojaCambio extends Component {
             <Icon
               name="arrow-down"
               size={10}
-              color={colors.white}
+              color={colors.black}
               style={styles.iconDetalhe}
             />
           </TouchableOpacity>
@@ -126,18 +126,20 @@ const styles = StyleSheet.create({
   areaDescricaoPedido: {
     flexDirection: "row",
     alignItems: "center",
-    textAlign: "center",
-    alignSelf: "center"
+    marginLeft: 15,
+    marginRight: 15,
+    justifyContent: 'center'
   },
   pedido: {
-    fontSize: 16,
-    fontWeight: "bold"
+    fontSize: 13,
+    fontWeight: "bold",
+    //textAlign: "center",
   },
   textColor: {
-    color: colors.white
+    color: colors.black
   },
   dataCadastro: {
-    fontSize: 12
+    fontSize: 11
   },
   areaButtonDetalhes: {
     flexDirection: "row",
@@ -148,14 +150,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "60%",
-    borderColor: colors.white,
+    borderColor: colors.black,
     borderWidth: 1,
     paddingLeft: 20,
     paddingRight: 20,
     height: 40
   },
   buttonDetalheTexto: {
-    color: colors.white
+    color: colors.black
   },
   iconDetalhe: {
     marginLeft: 5
@@ -172,7 +174,7 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   buttonTotalText: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 16,
     fontWeight: "bold"
   },
@@ -192,12 +194,12 @@ const styles = StyleSheet.create({
   },
   linha: {
     borderWidth: 0.4,
-    borderColor: colors.white,
+    borderColor: colors.black,
     marginTop: 10,
     borderStyle: "dashed"
   },
   titleItens: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 16,
     fontWeight: "bold"
   },
@@ -207,7 +209,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   iconePagamento: {
-    color: colors.white,
+    color: colors.black,
     marginRight: 5
   },
   areaDescricaoPagamento: {
@@ -222,12 +224,12 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   subTitulo: {
-    color: colors.white,
+    color: colors.black,
     fontWeight: "bold",
     fontSize: 14
   },
   textoDescricao: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 10,
     textAlign: "center"
   }

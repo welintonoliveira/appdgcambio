@@ -18,6 +18,7 @@ export class VitrineDeslogada extends Component {
   };
 
   getMessageCarrinho = message => {
+    console.log("message");
     switch (message.TipoMensagem) {
       case "NextLogin":
         this.props.paginaInicialChanged("Carrinho");

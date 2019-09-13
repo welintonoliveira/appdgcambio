@@ -43,7 +43,7 @@ export class AlertaConfirmacao extends Component {
       }
 
         // Persiste o token do cliente na base local para ser utilizado quando o cliente abrir o aplicativo novamente
-        AsyncStorage.setItem('@primecaseTokenCliente', this.state.cliente.Token);
+        AsyncStorage.setItem('@primecaseTokenClienteDG', this.state.cliente.Token);
 
         // Atualiza os dados do cliente no reducer
         this.props.atualizarDadosCliente(this.state.cliente.ID, 

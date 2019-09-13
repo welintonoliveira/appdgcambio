@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   text: {
-    color: colors.white,
+    color: colors.black,
     textAlign: "center",
     paddingLeft: 20,
     paddingRight: 20
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     right: 0
   },
   textButton: {
-    color: colors.white,
+    color: colors.black,
     fontWeight: "bold",
     fontSize: 18
   },
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   textoCarregamento: {
-    color: colors.white,
+    color: colors.black,
     fontSize: 18
   },
   espacoFormaPagamento: {

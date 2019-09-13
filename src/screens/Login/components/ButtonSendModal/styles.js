@@ -12,13 +12,14 @@ const styles = StyleSheet.create({
 		flexDirection:'row',
 		justifyContent:'center',
 		alignItems:'center',
-		backgroundColor:colors.success,
+		borderWidth: 1,
+		borderColor: colors.black,
 		height: 50,
-		borderRadius: 50
+		borderRadius: 5
 	},
 	texto:{
 		fontSize:20,
-		color: colors.white,
+		color: colors.black,
 	}
 
 });

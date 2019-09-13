@@ -108,7 +108,7 @@ export class Entrar extends Component {
             } else {
               // Persiste o token do cliente na base local para ser utilizado quando o cliente abrir o aplicativo novamente
               AsyncStorage.setItem(
-                "@primecaseTokenCliente",
+                "@primecaseTokenClienteDG",
                 response.data.Token
               );
 
@@ -179,9 +179,9 @@ export class Entrar extends Component {
             }}
           >
             <View style={styles.backgroundOpacity}>
-              <KeyboardAvoidingView style={styles.container} enabled>
+              <KeyboardAvoidingView style={styles.container}  behavior="padding" enabled>
                 <View style={styles.espacoLogoTopo}>
-                  <IconeSvg />
+                  <LogoSvg />
                 </View>
                 <View style={styles.espacoCampos}>
                   <View style={styles.areaInputEmailLogin}>
@@ -232,9 +232,6 @@ export class Entrar extends Component {
                   </View>
                 </View>
               </KeyboardAvoidingView>
-              <View style={[styles.espacoLogoRodape]}>
-                <LogoSvg />
-              </View>
             </View>
           </ImageBackground>
         </Content>

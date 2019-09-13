@@ -1,34 +1,25 @@
 import { StyleSheet } from "react-native";
-import { colors } from "../../../Styles";
+import { colors, general } from "../../../Styles";
 
 const styles = StyleSheet.create({
-  backgroundOpacity: {
-    backgroundColor: "rgba(172,33,38, 0.7)",
-    flex: 1,
-    paddingTop: 10
-  },
+  backgroundOpacity: general.backgroundOpacity,
   areaInputEmailLogin: {
     marginTop: 30,
-    paddingLeft: 30,
-    paddingRight: 30
+    marginLeft: 30,
+    marginRight: 30,
   },
   inputEmailLogin: {
-    backgroundColor: colors.white,
-    borderRadius: 50,
-    paddingLeft: 30,
-    height: 50
+    borderBottomColor: colors.black,
+    borderBottomWidth: 1,
+    height: 50,
   },
   espacoLogoTopo: {
-    aspectRatio: 1,
     justifyContent: "center",
     alignContent: "center",
     alignItems: "center",
-    alignSelf: "center",
-    marginBottom: 20,
-    marginTop: 20
+    alignSelf: "center"
   },
   espacoLogoRodape: {
-    // aspectRatio: 1,
     flex: 1,
     justifyContent: "center",
     alignContent: "center",

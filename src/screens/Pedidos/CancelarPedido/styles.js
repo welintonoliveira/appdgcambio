@@ -9,16 +9,17 @@ const styles = StyleSheet.create({
   },
   tituloCancelamento: {
     fontSize: 18,
-    color: colors.white,
+    color: colors.black,
     textAlign: "center",
     fontWeight: "bold",
     marginTop: 20,
     marginBottom: 20
   },
   inputMotivoCancelamento: {
-    backgroundColor: colors.white,
-    borderRadius: 50,
-    paddingLeft: 30,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.black,
+    marginLeft: 30,
+    marginRight: 30,
     height: 50
   },
   areaButtonFecharModal: {
@@ -29,7 +30,6 @@ const styles = StyleSheet.create({
     color: colors.greyDark,
     fontSize: 20,
     fontWeight: "bold",
-    //alignSelf:'flex-end'
     textAlign: "center"
   },
   iconWarning: {
@@ -41,10 +41,6 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   espacoAlerta: {
-    // backgroundColor: colors.warning,
-    // borderWidth: 2,
-    // borderColor: colors.warning,
-    // borderRadius: 10,
     padding: 10,
     marginBottom: 20
   }

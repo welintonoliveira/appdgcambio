@@ -11,7 +11,6 @@ import { Content, Container } from "native-base";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 import LogoSvg from "../../components/Logo/LogoSvg";
-import IconeSvg from "../../components/Logo/IconeSvg";
 import { colors } from "../../Styles";
 import styles from "./styles";
 import ModalLogin from "./ModalLogin";
@@ -20,62 +19,25 @@ import ModalDeslogar from "./ModalDeslogar";
 import HeaderApp from "../../components/HeaderApp";
 
 export default class Login extends Component {
-  state = {
-    visibleModalLogin: false,
-    visibleModalSenha: false,
-    visibleModalDeslogar: false,
-    email: "",
-    senha: "",
-    emailNewSenha: "",
-    emailValid: false,
-    senhaValid: false,
-    emailNewSenhaValid: false
-  };
-
   static navigationOptions = {
     header: null
-  };
-
-  openModalDeslogar = (ClienteEmail, ClienteSenha) => {
-    this.setState({
-      visibleModalSenha: false,
-      visibleModalLogin: false,
-      visibleModalDeslogar: true,
-      email: ClienteEmail,
-      senha: ClienteSenha
-    });
-  };
-
-  closeModalDeslogar = () => {
-    this.setState({ visibleModalDeslogar: false });
-  };
-
-  openModalNovaSenha = () => {
-    this.setState({ visibleModalSenha: true, visibleModalLogin: false });
-  };
-
-  closeModalNovaSenha = () => {
-    this.setState({ visibleModalSenha: false });
-  };
-
-  openModalLogin = () => {
-    this.setState({ visibleModalLogin: true });
-  };
-
-  closeModalLogin = () => {
-    this.setState({ visibleModalLogin: false });
   };
 
   back = () => {
     this.props.navigation.goBack();
   };
 
+  entrar = () =>{
+    console.log("Abrir nova pagina");
+    this.props.navigation.navigate("Entrar");
+  }
+
   render() {
     return (
       <Container>
         <HeaderApp
           initialRouter={false}
-          title="Pedidos"
+          title="Login"
           navigation={this.props.navigation}
           iconCarrinho={{ quantidadeItens: 0, visible: false }}
           showLogo={false}
@@ -94,55 +56,42 @@ export default class Login extends Component {
             }}
           >
             <View style={styles.backgroundOpacity}>
-              <KeyboardAvoidingView style={styles.container} enabled>
-                <View style={styles.espacoLogoTopo}>
-                  <IconeSvg />
-                </View>
-                {this.state.visibleModalSenha && (
-                  <ModalNovaSenha
-                    visible={this.state.visibleModalSenha}
-                    closeModalNovaSenha={this.closeModalNovaSenha}
-                  />
-                )}
-                {this.state.visibleModalDeslogar && (
-                  <ModalDeslogar
-                    visible={this.state.visibleModalDeslogar}
-                    closeModalDeslogar={this.closeModalDeslogar}
-                    email={this.state.email}
-                    senha={this.state.senha}
-                    pageInicial={this.props.navigation.getParam(
-                      "Page",
-                      "Pedidos"
-                    )}
-                  />
-                )}
-                <View style={styles.areaLogin}>
-                  <TouchableOpacity
-                    underlay
-                    onPress={() => this.props.navigation.navigate("Entrar")}
-                    style={[styles.buttonClienteExistente, styles.itenInline]}
-                  >
-                    <Icon name="key" style={styles.icon} />
-                    <Text style={styles.buttonLoginTexto}>
-                      Já sou cadastrado
-                    </Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() =>
-                      this.props.navigation.navigate("DadosCliente", {
-                        Origem: "Carrinho"
-                      })
-                    }
-                    style={[styles.buttonNovoCliente, styles.itenInline]}
-                  >
-                    <Icon name="user-plus" style={styles.icon} />
-                    <Text style={styles.buttonLoginTexto}>Novo cadastro</Text>
-                  </TouchableOpacity>
-                </View>
+              <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+                <ScrollView
+                  contentContainerStyle={{
+                    flexGrow: 1,
+                    justifyContent: "space-between",
+                    paddingBottom: 65
+                  }}
+                >
+                  <View style={styles.espacoLogoTopo}>
+                    <LogoSvg />
+                  </View>
+                  <View style={styles.areaLogin}>
+                    <TouchableOpacity
+                      underlay
+                      onPress={() => this.entrar()}
+                      style={[styles.buttonClienteExistente, styles.itenInline]}
+                    >
+                      <Icon name="key" style={styles.icon} />
+                      <Text style={styles.buttonLoginTexto}>
+                        Já sou cadastrado
+                      </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() =>
+                        this.props.navigation.navigate("DadosCliente", {
+                          Origem: "Carrinho"
+                        })
+                      }
+                      style={[styles.buttonNovoCliente, styles.itenInline]}
+                    >
+                      <Icon name="user-plus" style={styles.icon} />
+                      <Text style={styles.buttonLoginTexto}>Novo cadastro</Text>
+                    </TouchableOpacity>
+                  </View>
+                </ScrollView>
               </KeyboardAvoidingView>
-              <View style={[styles.espacoLogoRodape]}>
-                <LogoSvg />
-              </View>
             </View>
           </ImageBackground>
         </Content>

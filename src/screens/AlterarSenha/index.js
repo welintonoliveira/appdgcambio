@@ -3,10 +3,12 @@ import { View, Text, ImageBackground, ScrollView } from 'react-native';
 import { Content, Container } from "native-base";
 import { connect } from 'react-redux';
 import { atualizarSenha } from '../../actions/AuthActions';
+import md5 from "md5";
 
 import Loading from '../../components/Loading';
 import HeaderApp from '../../components/HeaderApp';
 import InputText from '../../components/InputText';
+import InputPassWord from '../../components/InputPassWord';
 import ButtonNext from '../../components/ButtonNext';
 import AppCambioAPI from '../../AppCambioAPI';
 
@@ -58,7 +60,13 @@ class AlterarSenha extends Component{
 			}else if(this.state.senhaNova !== this.state.senhaNovaConfirmacao){
 				this.setState({senhaNovaConfirmacaoErrorMessage: "O campo nova senha e senha de confirmação possuem valores diferentes."});
 			}else{
-				AppCambioAPI.alterarSenha(this.props.clienteEmail, this.state.senhaAntiga, this.state.senhaNova).then((response) =>{
+				// Cria um hash com a senha informada pelo cliente
+        		let senhaAntigaHash = md5(this.state.senhaAntiga);
+
+        		let senhaUper = senhaHash.toUpperCase();
+
+
+				AppCambioAPI.alterarSenha(this.props.clienteEmail, senhaUper , this.state.senhaNova).then((response) =>{
 
 					// Executa a mensagem de erro informada serviço
 					if(response.errorMessage !== ''){
@@ -107,9 +115,9 @@ class AlterarSenha extends Component{
 					>
 		            	<View style={[styles.backgroundOpacity, {paddingTop: 30}]}>
 		            		<ScrollView>
-								<InputText isPass={true} keyboardType="default" setTextValue={this.setSenhaAntigaValue} value={this.state.senhaAntiga} title="Senha atual*" errorMessage={this.state.senhaAntigaErrorMessage} />
-								<InputText isPass={true} keyboardType="default" setTextValue={this.setSenhaNovaValue} value={this.state.senhaNova} title="Nova senha*" errorMessage={this.state.senhaNovaErrorMessage} />
-								<InputText isPass={true} keyboardType="default" setTextValue={this.setSenhaNovaConfirmacaoValue} value={this.state.senhaNovaConfirmacao} title="Repita a nova senha*" errorMessage={this.state.senhaNovaConfirmacaoErrorMessage} />
+								<InputPassWord setTextValue={this.setSenhaAntigaValue} value={this.state.senhaAntiga} title="Senha atual*" errorMessage={this.state.senhaAntigaErrorMessage} />
+								<InputPassWord setTextValue={this.setSenhaNovaValue} value={this.state.setSenhaNovaValue} title="Nova senha*" errorMessage={this.state.senhaNovaErrorMessage} />
+								<InputPassWord setTextValue={this.setSenhaNovaConfirmacaoValue} value={this.state.senhaNovaConfirmacao} title="Repita a nova senha*" errorMessage={this.state.senhaNovaConfirmacaoErrorMessage} />
 							</ScrollView>
 							<ButtonNext title="CONTINUAR" nextClick={this.alterSenhaClick} />
 						</View>

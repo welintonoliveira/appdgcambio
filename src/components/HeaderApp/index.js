@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
 import { Header, Body, Left, Right } from "native-base";
 import IconFontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import IconIonicons from "react-native-vector-icons/Ionicons";
-import Logo from "../Logo";
+import LogoSvg from "../Logo/LogoSvg";
 
 import { colors } from "../../Styles";
 import styles from "./styles";
@@ -48,7 +48,7 @@ const HeaderApp = ({
           }}
         >
           <View style={styles.espacoLogo}>
-            <Logo />
+            <LogoSvg width="200" height="100" />
           </View>
           <View>
             <Text style={styles.title}>{title}</Text>

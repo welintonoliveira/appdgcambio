@@ -1,13 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../Styles';
+import { colors, general } from '../../Styles';
 
 const styles = StyleSheet.create({
-  	backgroundOpacity:{
-		backgroundColor: colors.blackTransparent,
-	    flex: 1
-	},
+  	backgroundOpacity: general.backgroundOpacity,
 	containerButtons:{
-		
 	},
 	button:{
 		flexDirection: 'row',
@@ -17,11 +13,11 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		height: 60,
 		borderWidth: 1,
-		borderColor: colors.white
+		borderColor: colors.black
 	},
 	title:{
 		fontSize: 18,
-		color: colors.white,
+		color: colors.black,
 	}	
 });
 

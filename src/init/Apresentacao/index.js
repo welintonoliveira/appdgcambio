@@ -12,7 +12,6 @@ export default class Apresentacao extends Component{
 	}
 
 	componentDidMount(){
-
 		setTimeout(()=>{
 			this.props.navigation.dispatch(StackActions.reset({
 				index:0,
@@ -20,7 +19,6 @@ export default class Apresentacao extends Component{
 					NavigationActions.navigate({ routeName: 'Home'})
 				]
 			}));
-			//this.props.navigation.navigate('Home');
 		}, 4200);
 	}
 

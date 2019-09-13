@@ -1,22 +1,16 @@
 import { StyleSheet } from "react-native";
-import { colors } from "../../../Styles";
+import { colors, general } from "../../../Styles";
 
 const styles = StyleSheet.create({
-  backgroundOpacity: {
-    backgroundColor: "rgba(172,33,38, 0.7)",
-    paddingTop: 10,
-    flex: 1
-  },
-
+  backgroundOpacity: general.backgroundOpacity,
   areaInputEmailLogin: {
     marginTop: 30,
     paddingLeft: 30,
     paddingRight: 30
   },
   inputEmailLogin: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 50,
-    paddingLeft: 30,
+    borderBottomColor: colors.black,
+    borderBottomWidth: 1,
     height: 50
   },
   areaInputSenhaLogin: {
@@ -27,18 +21,15 @@ const styles = StyleSheet.create({
     height: 50
   },
   inputSenhaLogin: {
-    backgroundColor: "#FFFFFF",
-    borderBottomLeftRadius: 50,
-    borderTopLeftRadius: 50,
-    paddingLeft: 30,
+    borderBottomColor: colors.black,
+    borderBottomWidth: 1,
     width: "80%"
   },
   areaIconeVisualizacaoSenha: {
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FFFFFF",
-    borderBottomRightRadius: 50,
-    borderTopRightRadius: 50,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.black,
     width: "20%"
   },
   areaButtonEntrar: {
@@ -60,17 +51,14 @@ const styles = StyleSheet.create({
     height: 50
   },
   buttonEsqueciMinhaSenhaTexto: {
-    color: "#FFFFFF",
+    color: colors.black,
     fontSize: 16
   },
   espacoLogoTopo: {
-    aspectRatio: 1,
     justifyContent: "center",
     alignContent: "center",
     alignItems: "center",
-    alignSelf: "center",
-    marginBottom: 20,
-    marginTop: 20
+    alignSelf: "center"
   },
   espacoLogoRodape: {
     // aspectRatio: 1,

@@ -20,7 +20,6 @@ export default class PreloadVitrineDeslogada extends Component{
 			index:0,
 			actions:[
 				NavigationActions.navigate({ routeName: 'VitrineDeslogada'})
-				//NavigationActions.navigate({ routeName: 'VitrineCarrinho'})
 			]
 		}));
 	}

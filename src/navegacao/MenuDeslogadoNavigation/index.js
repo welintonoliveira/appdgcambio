@@ -57,7 +57,7 @@ const Navigation = createDrawerNavigator(
   {
     contentComponent: CustomMenuDeslogadoNavigation,
     contentOptions: {
-      activeTintColor: colors.white,
+      activeTintColor: colors.black,
       activeBackgroundColor: colors.primary
     }
   }

@@ -3,11 +3,7 @@ import { StyleSheet } from "react-native";
 import { colors, general } from "../../Styles";
 
 const styles = StyleSheet.create({
-  backgroundOpacity: {
-    backgroundColor: "rgba(172,33,38, 0.7)",
-    flex: 1,
-    paddingTop: 40
-  },
+  backgroundOpacity:  general.backgroundOpacity,
   areaLogin: {
     marginTop: 20,
     width: "100%",
@@ -17,7 +13,7 @@ const styles = StyleSheet.create({
   buttonClienteExistente: {
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: colors.white,
+    borderColor: colors.black,
     height: 60
   },
   itenInline: {
@@ -26,19 +22,18 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   icon: {
-    color: "#fff",
+    color: colors.black,
     marginRight: 5,
     fontSize: 15
   },
   buttonLoginTexto: {
-    color: "#fff",
+    color: colors.black,
     fontSize: 17
   },
   buttonNovoCliente: {
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: colors.white,
-    // backgroundColor: colors.secondary,
+    borderColor: colors.black,
     height: 60,
     marginTop: 20
   },
@@ -48,11 +43,9 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
     alignSelf: "center",
-    marginBottom: 20,
     marginTop: 20
   },
   espacoLogoRodape: {
-    // aspectRatio: 1,
     flex: 1,
     justifyContent: "center",
     alignContent: "center",
