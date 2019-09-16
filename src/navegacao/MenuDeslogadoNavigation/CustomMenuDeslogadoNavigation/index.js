@@ -34,11 +34,11 @@ class CustomMenuDeslogadoNavigation extends Component {
             backgroundColor: colors.white,
             alignItems: "center",
             justifyContent: "center",
-            paddingTop: 80,
-            paddingBottom: 40
+            paddingTop: 40,
+            paddingBottom: 10
           }}
         >
-          <LogoSvg width="200" height="100" />
+          <LogoSvg width="900" height="200" viewbox={"0 0 612 792"} />
         </View>
         <ScrollView style={{ backgroundColor: colors.greyLight }}>
           <DrawerItems
