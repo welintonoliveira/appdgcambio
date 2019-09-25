@@ -7,7 +7,7 @@ import Loading from "../../components/Loading";
 
 import HeaderApp from "../../components/HeaderApp";
 
-export class Ajuda extends Component {
+class Ajuda extends Component {
   static navigationOptions = {
     header: null
   };
@@ -36,7 +36,7 @@ export class Ajuda extends Component {
     );
   }
 
-  handleBackButtonClick() {
+  handleBackButtonClick(){
     if (this.state.canGoBack) {
       this.refs[WEBVIEW_REF].goBack();
       return true;
@@ -45,13 +45,13 @@ export class Ajuda extends Component {
     }
   }
 
-  onNavigationStateChange(navState) {
+  onNavigationStateChange(navState){
     this.setState({
       canGoBack: navState.canGoBack
     });
   }
 
-  render() {
+  render(){
     return (
       <Container>
         <HeaderApp

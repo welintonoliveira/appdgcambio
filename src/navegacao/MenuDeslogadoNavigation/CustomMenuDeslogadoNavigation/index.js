@@ -46,7 +46,7 @@ class CustomMenuDeslogadoNavigation extends Component {
             onItemPress={({ route, focused }) => {
               switch (route.routeName) {
                 case "Home":
-                  this.props.navigation.navigate("PreloadVitrineDeslogada");
+                  this.props.navigation.navigate("VitrineDeslogada");
                   break;
                 case "MeusPedidos":
                   this.props.navigation.navigate("PreloadLogin");
@@ -55,7 +55,7 @@ class CustomMenuDeslogadoNavigation extends Component {
                   this.props.navigation.navigate("PreloadLoja");
                   break;
                 default:
-                  this.props.navigation.navigate("PreloadAjuda");
+                    this.props.navigation.navigate('PreloadAjuda');
                   break;
               }
             }}

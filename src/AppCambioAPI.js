@@ -2,7 +2,7 @@ class AppCambioAPI {
   // Executa o cancelamento do pedido do cliente
   async cancelarPedido(idPedido, idCliente, motivo) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/PedidoService.asmx/CancelarPedido",
+      "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/PedidoService.asmx/CancelarPedido",
       {
         method: "POST",
         body: JSON.stringify({
@@ -19,7 +19,7 @@ class AppCambioAPI {
   // Executa o envio de email de nova senha
   async enviarNovaSenha(email) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/SendEmailNovaSenha",
+      "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/SendEmailNovaSenha",
       {
         method: "POST",
         body: JSON.stringify({
@@ -42,7 +42,7 @@ class AppCambioAPI {
   deslogarCliente(token) {
     return new Promise(function(resolve, reject) {
       fetch(
-        "https://hlg-dgc-ljc-api.primecase.com.br/api/cliente/ExitUsuarioLogado",
+        "https://prd-dgc-ljc-api.primecase.com.br/api/cliente/ExitUsuarioLogado",
         {
           method: "POST",
           body: JSON.stringify({
@@ -71,7 +71,7 @@ class AppCambioAPI {
   verificarClienteLogado(token) {
     return new Promise(function(resolve, reject) {
       fetch(
-        "http://hlg-dgc-ljc-api.primecase.com.br/api/cliente/CheckUsuarioLogado",
+        "https://prd-dgc-ljc-api.primecase.com.br/api/cliente/CheckUsuarioLogado",
         {
           method: "POST",
           body: JSON.stringify({
@@ -100,7 +100,7 @@ class AppCambioAPI {
   enviarSenha(email) {
     return new Promise(function(resolve, reject) {
       fetch(
-        `https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/EnviarSenha?Email=${email}`
+        `https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/EnviarSenha?Email=${email}`
       )
         .then(r => r.json())
         .then(json => {
@@ -115,7 +115,7 @@ class AppCambioAPI {
   // Checa se existe um cliente cadastrado na base com o cpf informado
   async checkCPF(cpf) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/CheckClienteByCPF",
+      "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/CheckClienteByCPF",
       {
         method: "POST",
         body: JSON.stringify({
@@ -137,7 +137,7 @@ class AppCambioAPI {
   // Checa se existe um cliente cadastrado na base com o email informado
   async checkEmail(email) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/CheckClienteByEmail",
+      "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/CheckClienteByEmail",
       {
         method: "POST",
         body: JSON.stringify({
@@ -159,7 +159,7 @@ class AppCambioAPI {
   // Carrega os pedidos do cliente
   async carregarPedidosByIDCliente(idCliente) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-web.primecase.com.br/mobile/services/PedidoService.asmx/GetAll",
+      "https://prd-dgc-ljc-web.primecase.com.br/mobile/services/PedidoService.asmx/GetAll",
       {
         method: "POST",
         body: JSON.stringify({
@@ -177,7 +177,7 @@ class AppCambioAPI {
   // Desloga o cliente de outro aparelho
   async logoutCliente(email, senha) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-api.primecase.com.br/api/cliente/DeslogarCliente",
+      "https://prd-dgc-ljc-api.primecase.com.br/api/cliente/DeslogarCliente",
       {
         method: "POST",
         body: JSON.stringify({
@@ -199,7 +199,7 @@ class AppCambioAPI {
   // Get Token do cliente de acaesso
   async getTokenCliente(email, senha) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-api.primecase.com.br/token",
+      "https://prd-dgc-ljc-api.primecase.com.br/token",
       {
         method: "POST",
         headers: {
@@ -217,7 +217,7 @@ class AppCambioAPI {
   // Checa se o cliente está logado com o token informado
   async checkClienteLogadoByToken(token) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-api.primecase.com.br/api/cliente/CheckUsuarioLogado",
+      "https://prd-dgc-ljc-api.primecase.com.br/api/cliente/CheckUsuarioLogado",
       {
         method: "POST",
         body: JSON.stringify({
@@ -239,7 +239,7 @@ class AppCambioAPI {
   // Exeutar login do cliente
   async login(email, senha, descricaoAparelho) {
     let response = await fetch(
-      "https://hlg-dgc-ljc-api.primecase.com.br/api/cliente/Login",
+      "https://prd-dgc-ljc-api.primecase.com.br/api/cliente/Login",
       {
         method: "POST",
         body: JSON.stringify({
@@ -261,7 +261,7 @@ class AppCambioAPI {
   // Altera a senha do cliente
   async alterarSenha(email, senhaAtual, novaSenha) {
     let response = await fetch(
-      `https://hlg-dgc-ljc-api.primecase.com.br/api/cliente/AlterarSenha?email=${encodeURIComponent(
+      `https://prd-dgc-ljc-api.primecase.com.br/api/cliente/AlterarSenha?email=${encodeURIComponent(
         email
       )}&senhaAtual=${senhaAtual}&novaSenha=${novaSenha}`,
       {
@@ -275,7 +275,7 @@ class AppCambioAPI {
   // Altera a senha do cliente
   async getPracas() {
     let response = await fetch(
-      "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/pracaservice.asmx/GetPracas"
+      "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/pracaservice.asmx/GetPracas"
     );
 
     return await response.json();
@@ -283,25 +283,23 @@ class AppCambioAPI {
 
    // Recupera a coleção de vitrines
   /*async getVitrine() {
-    let response = await fetch("https://hlg-dgc-ljc-web.primecase.com.br/Handlers/VitrineMobileTurismoModelo1.ashx");
+    let response = await fetch("https://prd-dgc-ljc-web.primecase.com.br/Handlers/VitrineMobileTurismoModelo1.ashx");
 
     return await response.json();
   }*/
 
   getVitrine() {
-    return fetch("https://hlg-dgc-ljc-web.primecase.com.br/Handlers/VitrineMobileTurismoModelo1.ashx");
+    return fetch("https://prd-dgc-ljc-web.primecase.com.br/Handlers/VitrineMobileTurismoModelo1.ashx");
   }  
 
   // Envia uma nova senha para o cliente
   enviarSenhaPorCPF(cpf) {
     return new Promise(function(resolve, reject) {
       fetch(
-        `https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/EnviarSenhaPorCPF?CPF=${cpf}`
+        `https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/ClienteService.asmx/EnviarSenhaPorCPF?CPF=${cpf}`
       )
         .then(r => r.json())
         .then(json => {
-          console.log("api result email", email);
-          console.log("api result senha", senha);
           resolve(json);
         })
         .catch(error => {
@@ -311,7 +309,7 @@ class AppCambioAPI {
   }
 
   sendCompra(idTipoOperacao, isRecarga, idPraca, idItemVitrine, quantidadeMe) {
-    return fetch(`https://hlg-dgc-ljc-web.primecase.com.br/Mobile/CarrinhoModelo1/initVitrine.aspx?CompraMobile=Mobile&idTipoOperacao=${idTipoOperacao}&isRecarga=${isRecarga}&idPraca=${idPraca}&idItemVitrine=${idItemVitrine}&quantidadeMe=${quantidadeMe}`);
+    return fetch(`https://prd-dgc-ljc-web.primecase.com.br/Mobile/CarrinhoModelo1/initVitrine.aspx?CompraMobile=Mobile&idTipoOperacao=${idTipoOperacao}&isRecarga=${isRecarga}&idPraca=${idPraca}&idItemVitrine=${idItemVitrine}&quantidadeMe=${quantidadeMe}`);
   }  
 }
 

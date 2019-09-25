@@ -99,7 +99,7 @@ class DocumentosCliente extends Component {
 
           // Executa o envio dos documentos
           fetch(
-            "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/DocumentoService.asmx/SendDocuments",
+            "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/DocumentoService.asmx/SendDocuments",
             {
               method: "POST",
               body: JSON.stringify(this.state.data)

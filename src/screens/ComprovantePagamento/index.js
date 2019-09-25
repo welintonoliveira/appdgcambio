@@ -88,7 +88,7 @@ export default class ComprovantePagamento extends Component {
           this.setState({ isEnviando: true });
 
           fetch(
-            "https://hlg-dgc-ljc-web.primecase.com.br/Mobile/Services/DocumentoService.asmx/SendComprovantePagamento",
+            "https://prd-dgc-ljc-web.primecase.com.br/Mobile/Services/DocumentoService.asmx/SendComprovantePagamento",
             {
               method: "POST",
               body: JSON.stringify(this.state.data)

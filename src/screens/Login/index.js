@@ -28,7 +28,6 @@ export default class Login extends Component {
   };
 
   entrar = () =>{
-    console.log("Abrir nova pagina");
     this.props.navigation.navigate("Entrar");
   }
 

@@ -16,6 +16,8 @@ export default class PreloadLogin extends Component{
 	}
 
 	componentWillMount(){
+		console.log('passou aqui');
+
 		this.props.navigation.dispatch(StackActions.reset({
 			index:0,
 			actions:[
