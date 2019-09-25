@@ -78,6 +78,7 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 project.ext.vectoricons = [
     iconFontNames: [ 'MaterialIcons.ttf', 'Fontawesome.ttf', 'Fontawesome5_Regular.ttf', 'Fontawesome5_Brands.ttf', 'Fontawesome5_Solid.ttf' ] 
@@ -162,6 +163,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-code-push')
     implementation project(':react-native-linear-gradient')
     implementation project(':react-native-svg')
     implementation project(':react-native-video')
